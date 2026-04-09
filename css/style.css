@@ -16,13 +16,12 @@ header {
     text-align: center;
 }
 
+nav { display: flex; justify-content: center; gap: 2rem; }
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
+    color: white; text-decoration: none;
+    padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease;
 }
-
-nav a:hover { text-decoration: underline; }
+nav a:hover { background-color: rgba(255,255,255,0.2); }
 
 main {
     max-width: 800px;
@@ -39,9 +38,18 @@ footer {
     margin-top: 2rem;
 }
 
+
 /* Styles ajoutés par Brian (Contact) */
 .contact-container { margin-top: 1.5rem; }
 .form-group { margin-bottom: 1rem; }
 .form-group label { display: block; font-weight: bold; color: #6b4c3b; }
 .form-group input, .form-group textarea { width: 100%; padding: 0.5rem; border: 1px solid #ddd; }
 .btn-submit { background-color: #6b4c3b; color: white; padding: 0.75rem 1.5rem; border: none; cursor: pointer; }
+
+/* Styles ajoutés par Ruth (Menu) */
+.menu-section { margin-bottom: 2rem; }
+.menu-section h3 { color: #6b4c3b; border-bottom: 2px solid #6b4c3b; margin-bottom: 1rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.card { background: white; border-radius: 8px; padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+
