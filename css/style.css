@@ -8,6 +8,8 @@ body {
 }
 
 header {
+    background: linear-gradient(135deg, #6b4c3b 0%, #8b5e48 100%);
+    color: white; padding: 2rem; text-align: center;
     background-color: #6b4c3b;
     color: white;
     padding: 1rem;
@@ -36,3 +38,10 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+/* Styles ajoutés par Brian (Contact) */
+.contact-container { margin-top: 1.5rem; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-weight: bold; color: #6b4c3b; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.5rem; border: 1px solid #ddd; }
+.btn-submit { background-color: #6b4c3b; color: white; padding: 0.75rem 1.5rem; border: none; cursor: pointer; }
