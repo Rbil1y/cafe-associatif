@@ -3,37 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Associatif - Accueil</title>
+    <meta name="description" content="Café Associatif - Un lieu chaleureux et de partage.">
+    <title>Café Associatif | Accueil</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <header>
-        <h1>Café Associatif</h1>
+    <header class="navbar">
+        <div class="logo">
+            <i class="ph ph-coffee"></i> La Tasse Commune
+        </div>
         <nav>
-            <a href="index.html">Accueil</a>
+            <a href="index.html" class="active">Accueil</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     
-    <main style="text-align: center;"> <!-- J'ajoute un centrage rapide ici pour faire joli -->
-        <h2>Bienvenue au Café Associatif !</h2>
-        <p style="margin-bottom: 20px; font-size: 1.1rem;">
-            Un lieu chaleureux et convivial pour échanger, travailler ou simplement se détendre autour d'une bonne boisson chaude.
-        </p>
-        
-        <!-- Ajout d'une image d'illustration de café -->
-        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" 
-             alt="Intérieur chaleureux de notre café" 
-             style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); max-width: 100%; height: auto;">
-             
-        <p style="margin-top: 20px;">
-            <strong>Découvrez notre carte élaborée avec amour et venez nous rendre visite !</strong>
-        </p>
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in-up">
+                <h1>L'art de se <span class="highlight">retrouver</span></h1>
+                <p>Un lieu chaleureux et convivial pour échanger, travailler ou simplement se détendre autour des meilleurs grains.</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary">Découvrir la carte</a>
+                    <a href="contact.html" class="btn btn-secondary">Nous rejoindre</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <i class="ph ph-caret-down"></i>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card fade-in-up" style="animation-delay: 0.1s;">
+                <i class="ph ph-users-three"></i>
+                <h3>Convivialité</h3>
+                <p>Un espace pensé pour les rencontres et l'échange culturel.</p>
+            </div>
+            <div class="feature-card fade-in-up" style="animation-delay: 0.2s;">
+                <i class="ph ph-plant"></i>
+                <h3>Produits Locaux</h3>
+                <p>Des ingrédients soigneusement sélectionnés auprès de producteurs du coin.</p>
+            </div>
+            <div class="feature-card fade-in-up" style="animation-delay: 0.3s;">
+                <i class="ph ph-laptop"></i>
+                <h3>Coworking</h3>
+                <p>Wi-Fi haut débit et prises à disposition pour travailler en toute tranquillité.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Café Associatif - Ouvert du mardi au dimanche</p>
+        <div class="footer-content">
+            <p>&copy; 2025 La Tasse Commune - Café Associatif</p>
+            <p class="hours">Ouvert du mardi au dimanche • 09:00 - 19:00</p>
+        </div>
     </footer>
 </body>
 </html>

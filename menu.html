@@ -3,38 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Associatif - Menu</title>
+    <meta name="description" content="Découvrez notre carte : boissons chaudes, pâtisseries et plus.">
+    <title>Café Associatif | Notre Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <header>
-        <h1>Café Associatif</h1>
+    <header class="navbar">
+        <div class="logo">
+            <i class="ph ph-coffee"></i> La Tasse Commune
+        </div>
         <nav>
             <a href="index.html">Accueil</a>
-            <a href="menu.html">Menu</a>
+            <a href="menu.html" class="active">Menu</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main>
-        <h2>Notre carte</h2>
+    
+    <main class="page-container fade-in-up">
+        <div class="page-header">
+            <h2>Notre Carte</h2>
+            <p>Préparée avec passion, servie avec le sourire.</p>
+        </div>
+
         <section class="menu-section">
-            <h3>Boissons chaudes</h3>
+            <div class="section-title">
+                <i class="ph ph-mug-hot"></i>
+                <h3>Boissons Chaudes</h3>
+            </div>
             <div class="menu-grid">
-                <div class="card"><h4>Café espresso</h4><p>2,50 €</p></div>
-                <div class="card"><h4>Thé vert</h4><p>2,80 €</p></div>
-                <div class="card"><h4>Chocolat chaud</h4><p>3,20 €</p></div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Café Espresso</h4>
+                        <span class="price">2,50 €</span>
+                    </div>
+                    <p>Un classique intense, 100% Arabica torréfié localement.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Latte Macchiato</h4>
+                        <span class="price">3,80 €</span>
+                    </div>
+                    <p>Mousse onctueuse et une dose parfaite d'espresso.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Thé Matcha</h4>
+                        <span class="price">4,20 €</span>
+                    </div>
+                    <p>Thé vert japonais premium fouetté à la main.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Chocolat Chaud</h4>
+                        <span class="price">3,50 €</span>
+                    </div>
+                    <p>Recette maison façon grand-mère, très réconfortant.</p>
+                </div>
             </div>
         </section>
+
         <section class="menu-section">
-            <h3>Pâtisseries</h3>
+            <div class="section-title">
+                <i class="ph ph-cookie"></i>
+                <h3>Douceurs Salées & Sucrées</h3>
+            </div>
             <div class="menu-grid">
-                <div class="card"><h4>Cookie</h4><p>1,80 €</p></div>
-                <div class="card"><h4>Brownie</h4><p>2,50 €</p></div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Cookie Praliné</h4>
+                        <span class="price">2,20 €</span>
+                    </div>
+                    <p>Chocolat noir, noisettes du Piémont et pointe de fleur de sel.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Cake au Citron</h4>
+                        <span class="price">3,00 €</span>
+                    </div>
+                    <p>Moelleux et acidulé, avec un glaçage craquant.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Tartine Avocat</h4>
+                        <span class="price">6,50 €</span>
+                    </div>
+                    <p>Pain au levain, avocat écrasé, grenade et graines toastées.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Quiche du Jour</h4>
+                        <span class="price">5,50 €</span>
+                    </div>
+                    <p>Préparée le matin même avec les légumes de saison.</p>
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Café Associatif - Ouvert du mardi au dimanche</p>
+        <div class="footer-content">
+            <p>&copy; 2025 La Tasse Commune - Café Associatif</p>
+            <p class="hours">Ouvert du mardi au dimanche • 09:00 - 19:00</p>
+        </div>
     </footer>
 </body>
 </html>

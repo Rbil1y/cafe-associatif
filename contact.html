@@ -3,40 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Associatif - Contact</title>
+    <meta name="description" content="Contactez notre café associatif pour toutes questions.">
+    <title>Café Associatif | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <header>
-        <h1>Café Associatif</h1>
+    <header class="navbar">
+        <div class="logo">
+            <i class="ph ph-coffee"></i> La Tasse Commune
+        </div>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
-    <main>
-        <h2>Nous contacter</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <h3>Envoyez-nous un message</h3>
-                <form action="#" method="post">
+    
+    <main class="page-container fade-in-up">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>Passez nous voir !</h2>
+                <p>Nous sommes toujours ravis d'accueillir de nouvelles têtes. N'hésitez pas à nous écrire ou à venir directement.</p>
+                
+                <div class="info-item">
+                    <i class="ph ph-map-pin"></i>
+                    <div>
+                        <strong>Adresse</strong>
+                        <span>123 Rue de la Convivialité, 75000 Paris</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="ph ph-envelope-simple"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <span>bonjour@latassecommune.fr</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="ph ph-clock"></i>
+                    <div>
+                        <strong>Horaires</strong>
+                        <span>Mar - Dim : 09h00 - 19h00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Envoyez-nous un mot</h3>
+                <form action="#" method="post" class="contact-form">
                     <div class="form-group">
-                        <label>Nom :</label><input type="text" required>
+                        <label for="name">Votre Nom</label>
+                        <input type="text" id="name" required placeholder="Jean Dupont">
                     </div>
                     <div class="form-group">
-                        <label>Email :</label><input type="email" required>
+                        <label for="email">Votre Email</label>
+                        <input type="email" id="email" required placeholder="jean@exemple.com">
                     </div>
                     <div class="form-group">
-                        <label>Message :</label><textarea rows="4" required></textarea>
+                        <label for="message">Votre Message</label>
+                        <textarea id="message" rows="5" required placeholder="Comment pouvons-nous vous aider ?"></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">Envoyer</button>
+                    <button type="submit" class="btn btn-primary">
+                        Envoyer le message <i class="ph ph-paper-plane-tilt"></i>
+                    </button>
                 </form>
             </div>
         </div>
     </main>
+
     <footer>
-        <p>&copy; 2025 Café Associatif - Ouvert du mardi au dimanche</p>
+        <div class="footer-content">
+            <p>&copy; 2025 La Tasse Commune - Café Associatif</p>
+            <p class="hours">Ouvert du mardi au dimanche • 09:00 - 19:00</p>
+        </div>
     </footer>
 </body>
 </html>
