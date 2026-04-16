@@ -1,0 +1,141 @@
+/* STYLES SPÉCIFIQUES À LA PAGE ÉVÉNEMENTS */
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.event-card {
+    display: flex;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.event-card:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(230, 126, 34, 0.25);
+}
+
+.event-date {
+    background: var(--brand-accent);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-date::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.25), transparent);
+    z-index: 1;
+}
+
+.event-date .day {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-primary);
+    position: relative;
+    z-index: 2;
+}
+
+.event-date .month {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.event-content {
+    padding: 3rem 3.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-content h3 {
+    font-size: 1.8rem;
+    color: var(--brand-accent);
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.event-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.event-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--brand-primary);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.meta-item i {
+    font-size: 1.3rem;
+}
+
+.event-actions {
+    margin-top: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        padding: 1.5rem;
+        min-width: auto;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .event-date .day {
+        font-size: 2.5rem;
+    }
+    
+    .event-date .month {
+        margin-top: 0;
+    }
+    
+    .event-content {
+        padding: 2rem;
+    }
+    
+    .event-card:hover {
+        transform: translateY(-6px);
+        transform: translateX(0); /* override desktop hover */
+    }
+}
