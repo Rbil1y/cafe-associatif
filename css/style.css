@@ -55,23 +55,8 @@ body {
     border: 2px solid var(--bg-color);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--brand-primary);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-::selection {
-    background-color: var(--brand-primary);
+header {
+    background-color: #6b4c3b;
     color: white;
 }
 
@@ -111,114 +96,23 @@ nav {
     gap: 2rem;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 1rem;
-    position: relative;
-    padding-bottom: 0.25rem;
-    transition: color 0.3s ease;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 45%;
-    width: 10%;
-    height: 3px;
-    background-color: var(--brand-primary);
-    border-radius: 2px;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-nav a:hover,
-nav a.active {
-    color: var(--brand-primary);
-}
-
-nav a:hover::after,
-nav a.active::after {
-    width: 100%;
-    left: 0;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* BUTTONS */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-}
-
-.btn-primary {
-    background-color: var(--brand-primary);
-    color: white;
-    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
-}
-
-.btn-primary:hover {
-    background-color: var(--brand-primary-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.btn-secondary:hover {
-    background-color: white;
-    color: var(--brand-accent);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
-}
-
-/* HERO SECTION (index.html) */
-.hero {
-    height: 100vh;
+nav {
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=2000');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* EFFET PARALLAX */
+    gap: 2rem;
+}
+
+nav a {
     color: white;
-    text-align: center;
+    text-decoration: none;
+    margin: 0 1rem;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(42, 33, 24, 0.4), rgba(42, 33, 24, 0.7));
-    z-index: 1;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
+main {
     max-width: 800px;
     padding: 0 2rem;
 }
@@ -722,4 +616,60 @@ footer {
     .scroll-indicator {
         display: none;
     }
+}
+
+
+/* Styles ajoutés par Brian (Contact) */
+.contact-container {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #6b4c3b;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.btn-submit {
+    background-color: #6b4c3b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles ajoutés par Ruth (Menu) */
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+.menu-section h3 {
+    color: #6b4c3b;
+    border-bottom: 2px solid #6b4c3b;
+    margin-bottom: 1rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
